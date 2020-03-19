@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -33,7 +33,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a href="{{ route("alumni.index") }}">Alumni</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route("alumni.index") }}">Alumni</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route("users.index") }}">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route("courses.index") }}">Courses</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -22,7 +22,7 @@
                         <td>{{ $alumnus->phone }}</td>
                         <td>{{ $alumnus->type }}</td>
                         <td>
-                            <a href="{{ route("alumnus") }}"></a>
+                            <a href="{{ route("alumni.show", $alumnus) }}">View</a>
                         </td>
                     </tr>
                     @endforeach

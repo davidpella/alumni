@@ -87,62 +87,64 @@
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="registration_number">Registration number</label>
-                        <input type="text" name="registration_number" id="registration_number" class="form-control @error('registration_number') is-invalid @enderror" value="{{ old("registration_number") }}">
-                        @error('registration_number')
-                        <span class="invalid-feedback" role="alert">
+                <div id="graduation">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="registration_number">Registration number</label>
+                            <input type="text" name="registration_number" id="registration_number" class="form-control @error('registration_number') is-invalid @enderror" value="{{ old("registration_number") }}">
+                            @error('registration_number')
+                            <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
-                        @enderror
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="graduation_year">Graduation year</label>
+                            <select id="graduation_year" name="graduation_year" class="form-control @error('graduation_year') is-invalid @enderror">
+                                <option value="">Choose...</option>
+                                @foreach(range(1, 21) as $year)
+                                    <option value="{{ $year }}" @if(old('graduation_year') == $year) selected @endif>
+                                        {{ \Carbon\Carbon::now()->subYears($year)->year }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('graduation_year')
+                            <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="course_id">Course</label>
+                            <select id="course_id" name="course_id" class="form-control @error('course_id') is-invalid @enderror">
+                                <option value="">Choose...</option>
+                                @foreach(\App\Models\Course::all() as $course)
+                                    <option value="{{ $course->id }}" @if(old('course_id') == $course->id) selected @endif>
+                                        {{ $course->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('course_id')
+                            <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                            @enderror
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="graduation_year">Graduation year</label>
-                        <select id="graduation_year" name="graduation_year" class="form-control @error('graduation_year') is-invalid @enderror">
-                            <option value="">Choose...</option>
-                            @foreach(range(1, 21) as $year)
-                            <option value="{{ $year }}" @if(old('graduation_year') == $year) selected @endif>
-                                {{ \Carbon\Carbon::now()->subYears($year)->year }}
-                            </option>
-                            @endforeach
-                        </select>
-                        @error('graduation_year')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="course_id">Course</label>
-                        <select id="course_id" name="course_id" class="form-control @error('course_id') is-invalid @enderror">
-                            <option value="">Choose...</option>
-                            @foreach(\App\Models\Course::all() as $course)
-                            <option value="{{ $course->id }}" @if(old('course_id') == $course->id) selected @endif>
-                                {{ $course->name }}
-                            </option>
-                            @endforeach
-                        </select>
-                        @error('course_id')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                </div>
-
+                
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="current_employee">Current Employee</label>
                         <input type="text" name="current_employee" id="current_employee" class="form-control @error('current_employee') is-invalid @enderror" value="{{ old('current_employee') }}">
                         @error('current_employee')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <strong>{{ $message }}</strong>
+                    </span>
                         @enderror
                     </div>
 
@@ -151,8 +153,8 @@
                         <input type="text" name="position" id="position" class="form-control @error('position') is-invalid @enderror" value="{{ old('position') }}">
                         @error('position')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <strong>{{ $message }}</strong>
+                    </span>
                         @enderror
                     </div>
                 </div>
@@ -185,4 +187,16 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById("type").addEventListener("change", function (event) {
+            let alumniType = event.target.value;
+
+            if(alumniType === 'staff') {
+                document.getElementById("graduation").style.display = "none";
+            } else {
+                document.getElementById("graduation").style.display = "block";
+            }
+        });
+    </script>
 @endsection

@@ -11,6 +11,11 @@ class Alumnus extends Model
 
     protected $appends = ["name"];
 
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
     public function setPasswordAttribute($password){
 
         $this->attributes['password'] = Hash::make($password);

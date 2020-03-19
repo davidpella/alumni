@@ -20,4 +20,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         "permissions" => "json"
     ];
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes["password"] = bcrypt($password);
+    }
 }

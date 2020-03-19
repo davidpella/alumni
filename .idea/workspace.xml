@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="817cb0e6-2478-4d50-bd03-8a5ddebe10e9" name="Default Changelist" comment="" />
+    <list default="true" id="817cb0e6-2478-4d50-bd03-8a5ddebe10e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/alumni/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/courses/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/courses/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Administrator/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Administrator/CoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Alumnus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Alumnus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/alumni/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/alumni/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +27,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,13 +140,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/courses" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/courses" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Administrator" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -152,6 +179,12 @@
       <workItem from="1583571914707" duration="455000" />
       <workItem from="1583576301557" duration="1760000" />
       <workItem from="1583578151466" duration="739000" />
+      <workItem from="1583642715138" duration="17000" />
+      <workItem from="1584610807648" duration="585000" />
+      <workItem from="1584611444732" duration="1339000" />
+      <workItem from="1584612821123" duration="1700000" />
+      <workItem from="1584614633972" duration="1827000" />
+      <workItem from="1584616925445" duration="1121000" />
     </task>
     <servers />
   </component>
@@ -159,17 +192,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="384" key="NewPhpFileDialog" timestamp="1583577479653">
+    <state x="478" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584616197248">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="558" y="384" key="NewPhpFileDialog/0.23.1440.829@0.23.1440.829" timestamp="1583577479653" />
-    <state x="400" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1583578153811">
+    <state x="478" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1584616197248" />
+    <state x="558" y="384" key="NewPhpFileDialog" timestamp="1584615458283">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="400" y="290" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1583578153811" />
-    <state x="405" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1583578019839">
+    <state x="558" y="384" key="NewPhpFileDialog/0.23.1440.829@0.23.1440.829" timestamp="1584615458283" />
+    <state x="241" y="96" key="SettingsEditor" timestamp="1584612784478">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="405" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1583578019839" />
+    <state x="241" y="96" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584612784478" />
+    <state x="400" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1584616925912">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="400" y="290" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1584616925912" />
+    <state x="405" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584617395447">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="405" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1584617395447" />
   </component>
 </project>
