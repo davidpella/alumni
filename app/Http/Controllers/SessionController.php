@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
@@ -14,7 +14,7 @@ class SessionController extends Controller
 
     public function login(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             "email" => ["required", "email"],
             "password" => ["required"],
         ]);

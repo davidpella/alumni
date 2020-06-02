@@ -2,6 +2,10 @@
 
 @section("content")
     <div class="container">
+        <form class="mb-4">
+            <input type="search" aria-label="search" name="q" class="form-control" placeholder="Search..." />
+        </form>
+
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <h3>Users</h3>

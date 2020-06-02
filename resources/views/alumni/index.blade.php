@@ -2,6 +2,10 @@
 
 @section("content")
     <div class="container">
+        <form class="mb-4">
+            <input type="search" aria-label="search" name="q" class="form-control" placeholder="Search..." />
+        </form>
+
         <div class="card">
             <div class="card-header">Alumni</div>
 
@@ -28,6 +32,10 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+
+        <div class="mt-4">
+            {{ $alumni->links() }}
         </div>
     </div>
 @endsection

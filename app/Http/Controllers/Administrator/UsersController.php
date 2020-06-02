@@ -13,16 +13,18 @@ class UsersController extends Controller
         $this->middleware("auth");
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::query()->latest()->paginate();
+        $users = User::latest()->when($request->has('q'), function ($query){
+            $query->search(request("q"));
+        })->paginate();
 
         return view("users.index", ["users" => $users]);
     }
 
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             "name" => ["required"],
             "email" => ["required"],
             "role" => ["required"],
@@ -36,7 +38,7 @@ class UsersController extends Controller
 
     public function update(Request $request, User $user)
     {
-        $this->validate($request, [
+        $request->validate([
             "name" => ["required"],
             "email" => ["required"],
             "role" => ["required"],

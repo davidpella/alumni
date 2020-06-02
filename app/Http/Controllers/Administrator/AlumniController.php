@@ -13,10 +13,14 @@ class AlumniController extends Controller
         $this->middleware("auth");
     }
 
-    public function index()
+    public function index(Request $request)
     {
         return view("alumni.index", [
-            "alumni" => Alumnus::latest()->paginate()
+            "alumni" => Alumnus::latest()
+                ->when($request->has('q'), function ($query){
+                    $query->search(request("q"));
+                })
+                ->paginate()
         ]);
     }
 
