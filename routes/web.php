@@ -1,15 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
-
 Auth::routes();
-
-Route::get("", "WelcomeController");
-
+Route::view("", "pages.home")->name("pages.home");
+Route::view("about-us", "pages.about")->name("pages.about");
+Route::get("register", "WelcomeController");
 Route::post("alumni", "AlumniController@store")->name("alumni.register");
-
 Route::get("home", 'HomeController@index')->name('home');
 
 Route::prefix("admin")->group(function () {
